@@ -5,6 +5,34 @@ import time
 from Foundation import *
 from os import system
 import subprocess, time
+from datetime import datetime
+import mysql.connector
+from config import USER, PASSWORD, HOST, DATABASE
+import threading 
+
+# Database connection
+
+db = mysql.connector.connect(
+    host = HOST,
+    user = USER,
+    password = PASSWORD,
+    database = DATABASE
+
+)
+
+cursor = db.cursor()
+
+def save_session(app_name, info, start, end):
+    """Insert session data into MySQL"""
+    duration = (end - start).total_seconds()
+    sql = """INSERT INTO time_tracked (app_name, info, start, end, duration_seconds)
+            VALUES (%s, %s, %s, %s, %s)"""
+
+    values = (app_name, info, start, end, duration)
+    cursor.execute(sql, values)
+    db.commit()
+    print(f'Saved {app_name} | {info} | {duration}s')
+
 
 # active_window_name = ""
 # while True:
@@ -53,6 +81,11 @@ def app_file_name():
 last_domain = None
 
 # last = ""
+
+last_app = None
+last_info = None
+start = datetime.now()
+
 try:
     while True:
         app = NSWorkspace.sharedWorkspace().activeApplication().get('NSApplicationName')
@@ -71,13 +104,23 @@ try:
             if domain:
                 info = domain
         
-        if info and info != last_domain:
-            print(f'{app}: {info}')
-            last_domain = info
+        if app != last_app or info != last_info:
+            now = datetime.now()
 
+            if last_app is not None:
+                save_session(last_app, last_info, start, now)
+
+            last_app = app
+            last_info = info
+            start = now
+
+        # if info and info != last_domain:
+            print(f'{app}: {info}')
+            # last_domain = info
+        
         time.sleep(5)        
 
 except KeyboardInterrupt:
     stop_flag = True
-    print("Program stopped")
+    print('Time Tracking now stopped, please restart if needed')
 
