@@ -1,3 +1,6 @@
+# This is the original code, that I hacve no re-hashed (keeping this for future ref, if needed)
+
+
 from __future__ import print_function
 from AppKit import NSWorkspace, NSAppleScript
 from urllib.parse import urlparse
