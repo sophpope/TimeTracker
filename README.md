@@ -21,7 +21,7 @@
 
 #### This app will record the sessions 
 
-##### Google Chrome | www.canva.com | 1500secs | 09:00 - 09:25 | 25-10-2025
+#### Google Chrome | www.canva.com | 1500secs | 09:00 - 09:25 | 25-10-2025
 
 #### Code | autotimer.py - TimeTracker | 1800secs | 09:25 - 09:55 | 25-10-2025
 
