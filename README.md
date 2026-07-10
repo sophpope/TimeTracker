@@ -1,4 +1,4 @@
-# TimeTracker
+# Time Tracker
 
 #### A productivity time tracking application that automatically records how much time is spent in different applications and browser tabs.
 
