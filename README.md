@@ -2,7 +2,7 @@
 
 #### A productivity time tracking application that automatically records how much time is spent in different applications and browser tabs.
 
-#### The app tracks the active window on the user's computer. When switching to another application, website or tab the current session ends and a new session begins. Each session is saved to the database with the details i.e. 'Microsoft Word - Document 2' or 'Code - main.py TimeTracker' along with the durations in seconds and the start and end date and time.
+#### The app tracks the active window on the user's computer. When switching to another application, website or tab the current session ends and a new session begins. Each session is saved to the database with the details i.e. 'Microsoft Word - Document 2' or 'Code - main.py time_tracker' along with the durations in seconds and the start and end date and time.
 
 #### The project is built to help users easily understand where there time goes during the day, whilst on their computers without the need of manually stopping and starting timers. 
 
