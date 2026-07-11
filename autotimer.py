@@ -1,4 +1,4 @@
-# This is the original code, that I hacve no re-hashed (keeping this for future ref, if needed)
+# This is the original code, that I have now re-hashed (keeping this for future ref, if needed)
 
 
 from __future__ import print_function
