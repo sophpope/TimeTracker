@@ -34,6 +34,16 @@
 * Python
 * MySQL
 
+## Installation 
+
+#### 1. Clone the repository.
+#### 2. Open the folder
+#### 3. Install requirements
+#### pip install pyobjc mysql-connector-python
+#### 4. Create the MySQL database from 'time_tracker_DB.sql' and update the database connection details in the config.py file
+#### 5. Run the application - 'main.py'
+
+
 ## Improvement Ideas
 
 ### Front End Dashboard
