@@ -39,8 +39,8 @@
 #### 1. Clone the repository.
 #### 2. Open the folder
 #### 3. Install requirements
-#### pip install pyobjc mysql-connector-python
-#### 4. Create the MySQL database from 'time_tracker_DB.sql' and update the database connection details in the config.py file
+`pip install pyobjc mysql-connector-python`
+#### 4. Create the MySQL database from 'time_tracker_DB.sql' and update the database connection details in the 'config.py' file
 #### 5. Run the application - 'main.py'
 
 
@@ -60,5 +60,5 @@
 
 ### Manual Editing
 
-#### Allow users to edit or rename sessions if the sutomatic title is unclear.
+#### Allow users to edit or rename sessions if the automatic title is unclear.
 
